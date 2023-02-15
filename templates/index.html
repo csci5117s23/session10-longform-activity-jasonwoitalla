@@ -5,6 +5,11 @@
 {% endblock %}
 {% block content %}
     <h1>Home Page</h1>
-    <p>Home</p>
-    <a class="pure-button pure-button-primary" href="/login">Login</a>
+    {% if logged_in is defined %}
+        <p>Home</p>
+        <a class="pure-button pure-button-primary" href="/login">Login</a>
+    {% else %}
+        <p>Hello {{ user_name }}</p>
+        <a class="pure-button pure-button-primary" href="/logout">Logout</a>
+    {% endif %}
 {% endblock %}

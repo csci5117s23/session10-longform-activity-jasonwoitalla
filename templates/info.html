@@ -1,0 +1,10 @@
+{% extends "layouts/layout.html" %}
+{% block title %}Info{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <h1>Info Page</h1>
+    <p>Hello {{ user_name }} welcome to our page for the first time!</p>
+    <a class="pure-button pure-button-primary" href="/home">Home</a>
+{% endblock %}
